@@ -1,0 +1,56 @@
+ID, Nama, Usia, Kategori, Kehamilan (bulan), Prioritas
+1, Ani, 25, Ibu Hamil, 6, Sedang
+2, Budi, 70, Lansia, 0, Tinggi
+3, Citra, 15, Remaja, 0, Rendah
+4, Dedi, 68, Lansia, 0, Tinggi
+5, Evi, 28, Ibu Hamil, 4, Sedang
+6, Fajar, 17, Remaja, 0, Rendah
+7, Gita, 72, Lansia, 0, Tinggi
+8, Haris, 16, Remaja, 0, Rendah
+9, Indah, 26, Ibu Hamil, 7, Tinggi
+10, Joko, 65, Lansia, 0, Tinggi
+11, Kiki, 14, Remaja, 0, Rendah
+12, Lilis, 27, Ibu Hamil, 5, Sedang
+13, Maman, 75, Lansia, 0, Tinggi
+14, Nina, 15, Remaja, 0, Rendah
+15, Ocha, 32, Ibu Hamil, 3, Tinggi
+16, Pardi, 67, Lansia, 0, Tinggi
+17, Qori, 18, Remaja, 0, Rendah
+18, Rini, 29, Ibu Hamil, 8, Tinggi
+19, Sigit, 73, Lansia, 0, Tinggi
+20, Tika, 16, Remaja, 0, Rendah
+21, Uli, 23, Ibu Hamil, 2, Tinggi
+22, Vino, 69, Lansia, 0, Tinggi
+23, Wati, 14, Remaja, 0, Rendah
+24, Yani, 24, Ibu Hamil, 6, Sedang
+25, Zaenal, 71, Lansia, 0, Tinggi
+26, Alif, 15, Remaja, 0, Rendah
+27, Bunga, 28, Ibu Hamil, 5, Sedang
+28, Chandra, 74, Lansia, 0, Tinggi
+29, Dika, 13, Remaja, 0, Rendah
+30, Erna, 30, Ibu Hamil, 7, Tinggi
+31, Firman, 65, Lansia, 0, Tinggi
+32, Gani, 16, Remaja, 0, Rendah
+33, Hesti, 27, Ibu Hamil, 6, Sedang
+34, Imam, 70, Lansia, 0, Tinggi
+35, Jeni, 15, Remaja, 0, Rendah
+36, Kartini, 29, Ibu Hamil, 8, Tinggi
+37, Lono, 72, Lansia, 0, Tinggi
+38, Mira, 17, Remaja, 0, Rendah
+39, Novi, 26, Ibu Hamil, 4, Sedang
+40, Oki, 68, Lansia, 0, Tinggi
+41, Putri, 14, Remaja, 0, Rendah
+42, Qorin, 25, Ibu Hamil, 7, Tinggi
+43, Rudi, 69, Lansia, 0, Tinggi
+44, Sari, 13, Remaja, 0, Rendah
+45, Tono, 75, Lansia, 0, Tinggi
+46, Umi, 28, Ibu Hamil, 5, Sedang
+47, Vera, 70, Lansia, 0, Tinggi
+48, Widi, 16, Remaja, 0, Rendah
+49, Yulia, 24, Ibu Hamil, 3, Tinggi
+50, Zainab, 66, Lansia, 0, Tinggi
+51, Asep, 34, Dewasa, 0, Rendah
+52, Rina, 31, Dewasa, 0, Rendah
+53, Dika, 36, Dewasa, 0, Rendah
+54, Eka, 40, Dewasa, 0, Rendah
+55, Sinta, 22, Dewasa, 0, Rendah
