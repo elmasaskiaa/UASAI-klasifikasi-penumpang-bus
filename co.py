@@ -1,6 +1,3 @@
-import pandas as pd
-from math import log2
-
 class Node:
     def __init__(self, attribute=None, threshold=None, left=None, right=None, value=None):
         self.attribute = attribute
@@ -18,6 +15,7 @@ class Node:
             return self.right.classify(instance)
 
 def calculate_entropy(labels):
+    from math import log2
     total = len(labels)
     counts = {label: labels.count(label) for label in set(labels)}
     return -sum((count/total) * log2(count/total) for count in counts.values())
@@ -69,16 +67,33 @@ def convert_categorical_to_numeric(data):
         instance['Kategori'] = mapping[instance['Kategori']]
     return data
 
+def prepare_data():
+    data = [
+        {'Usia': 25, 'Kategori': 'Ibu Hamil', 'Kehamilan': 6},
+        {'Usia': 70, 'Kategori': 'Lansia', 'Kehamilan': 0},
+        {'Usia': 15, 'Kategori': 'Remaja', 'Kehamilan': 0},
+        {'Usia': 68, 'Kategori': 'Lansia', 'Kehamilan': 0},
+        {'Usia': 28, 'Kategori': 'Ibu Hamil', 'Kehamilan': 4},
+        {'Usia': 17, 'Kategori': 'Remaja', 'Kehamilan': 0},
+        {'Usia': 72, 'Kategori': 'Lansia', 'Kehamilan': 0},
+        {'Usia': 16, 'Kategori': 'Remaja', 'Kehamilan': 0},
+        {'Usia': 26, 'Kategori': 'Ibu Hamil', 'Kehamilan': 7},
+        {'Usia': 65, 'Kategori': 'Lansia', 'Kehamilan': 0},
+        {'Usia': 34, 'Kategori': 'Dewasa', 'Kehamilan': 0},
+        {'Usia': 31, 'Kategori': 'Dewasa', 'Kehamilan': 0},
+        {'Usia': 36, 'Kategori': 'Dewasa', 'Kehamilan': 0},
+        {'Usia': 40, 'Kategori': 'Dewasa', 'Kehamilan': 0},
+        {'Usia': 22, 'Kategori': 'Dewasa', 'Kehamilan': 0},
+    ]
+    labels = ['Sedang', 'Tinggi', 'Rendah', 'Tinggi', 'Sedang', 'Rendah', 'Tinggi', 'Rendah', 'Tinggi', 'Tinggi',
+              'Rendah', 'Rendah', 'Rendah', 'Rendah', 'Rendah']
+    return data, labels
+
 def main():
-    # Read data from CSV file
-    data = pd.read_csv('dataset.csv')
-
-    # Extract labels and delete them from data
-    labels = data['Kategori']
-    del data['Kategori']
-
-    # Convert DataFrame to list of dictionaries
-    data = data.to_dict(orient='records')
+    data, labels = prepare_data()
+    if not data:
+        print("Tidak ada data yang tersedia.")
+        return
 
     data = convert_categorical_to_numeric(data)
     attributes = ['Usia', 'Kategori', 'Kehamilan']
@@ -95,12 +110,12 @@ def main():
             print("Usia harus berupa angka. Silakan coba lagi.")
             continue
 
-        if 0 <= usia < 18:
-            kategori = 'Remaja'
-        elif 18 <= usia < 60:
-            kategori = 'Dewasa'
-        elif usia >= 60:
-            kategori = 'Lansia'
+        kategori = input("Kategori (Ibu Hamil/Lansia/Remaja/Dewasa): ").title()
+        if kategori.lower() == 'stop':
+            break
+        if kategori not in ['Ibu Hamil', 'Lansia', 'Remaja', 'Dewasa']:
+            print("Kategori tidak valid. Silakan coba lagi.")
+            continue
 
         if kategori == 'Lansia':
             print("Klasifikasi: Lansia, Prioritas: Tinggi")
